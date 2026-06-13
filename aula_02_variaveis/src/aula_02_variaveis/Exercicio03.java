@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class Exercicio03 {
 
 	public static void main(String[] args) {
-		
-
+	
 		Scanner leia = new Scanner(System.in);
 		
 		float salario_bruto;
@@ -27,21 +26,15 @@ public class Exercicio03 {
 		System.out.print( "Digite o valor de descontos: ");
 		descontos = leia.nextFloat();
 		
+		//Conforme a orientação do exercício, as horas extras estão sendo multiplicadas por 5
+		//isso significa que, no Console irá pedir multiplicar a quantidade de horas extras
+		//e essa multiplicação será de 5 reais x quantidade de horas extras inseridos no console.
+		
 		salario_liquido = (salario_bruto + adicional_noturno + (horas_extras * 5) - descontos);
-		
-			
+					
 		System.out.printf("\nO Salario Liquido é: %.2f", salario_liquido);
+				leia.close();
 		
-		
-	
-		leia.close();
-		
-		
-		
-		
-		
-		
-		
-	}
+		}
 
 }
