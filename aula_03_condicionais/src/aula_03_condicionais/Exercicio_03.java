@@ -32,6 +32,8 @@ public class Exercicio_03 {
 		System.out.println("********************************************");
 					
 	
+		
+		
 	int opcao;
 					
 		System.out.println("Escolha a Opção Desejada: ");
@@ -57,11 +59,55 @@ public class Exercicio_03 {
 			System.out.printf(" 1 - A opção selecionada é GERENTE.\n"
 					+ "O Reajuste salarial foi de: 10%");
 			
-			resultado = num1 + (gerente * num1);
-			System.out.printf(" é %.2f", resultado);
+			resultado = num1 + (num1 * gerente);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
 			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
 			break;
-		
+		case 2:
+			System.out.printf(" 1 - A opção selecionada é VENDEDOR.\n"
+					+ "O Reajuste salarial foi de: 7%");
+			
+			resultado = num1 + (num1 * vendedor);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+		case 3:
+			System.out.printf(" 1 - A opção selecionada é SUPERVISOR.\n"
+					+ "O Reajuste salarial foi de: 9%");
+			
+			resultado = num1 + (num1 * supervisor);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+		case 4:
+			System.out.printf(" 1 - A opção selecionada é MOTORISTA.\n"
+					+ "O Reajuste salarial foi de: 6%");
+			
+			resultado = num1 + (num1 * motorista);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+		case 5:
+			System.out.printf(" 1 - A opção selecionada é ESTOQUISTA.\n"
+					+ "O Reajuste salarial foi de: 5%");
+			
+			resultado = num1 + (num1 * estoquista);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+		case 6:
+			System.out.printf(" 1 - A opção selecionada é TECNICO DE TI.\n"
+					+ "O Reajuste salarial foi de: 8%");
+			
+			resultado = num1 + (num1 * tecnicoTi);
+			System.out.printf(" O seu novo salario é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+			
+		default:
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+	}
 		}
 			
 		
