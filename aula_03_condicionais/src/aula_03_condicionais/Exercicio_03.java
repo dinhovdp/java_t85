@@ -35,23 +35,23 @@ public class Exercicio_03 {
 		
 		
 	int opcao;
-					
+	int num1 = 0;			
+	
+	
 		System.out.println("Escolha a Opção Desejada: ");
 		opcao = leia.nextInt();
 		
-		if (opcao >= 1 || opcao <= 6) {
+		if (opcao >= 1 && opcao <= 6) {
 			System.out.println("Você escolheu um cargo corretamente.\n");
+			
+			System.out.println("Insira o valor do salário: ");
+		num1 = leia.nextInt();
 			
 		}else {
 				System.out.println("Você escolheu uma opção invalida");
 		}
 		
-		int num1 = 0;
-		System.out.println("Insira o valor do salário: ");
-		num1 = leia.nextInt();
-		
-	
-		
+						
 		float resultado = 0.2f;
 		float gerente = 0.10f;
 		float vendedor = 0.07f;
