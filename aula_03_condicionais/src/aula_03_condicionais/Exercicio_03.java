@@ -8,7 +8,9 @@ public class Exercicio_03 {
 		Scanner leia = new Scanner(System.in);
 		
 	String nome; 
-		
+	
+	
+	
 		System.out.println("Digite o seu nome: ");
 		nome = leia.next();
 		
@@ -23,22 +25,47 @@ public class Exercicio_03 {
 		System.out.println("										    ");
 		System.out.println("	1 - GERENTE			4 - MOTORISTA		");
 		System.out.println("	2 - VENDEDOR	  	5 - ESTOQUISTA 	    ");
-		System.out.println("	3 - SUPERVISOR	 /	6 - TECNICO DE TI   ");
+		System.out.println("	3 - SUPERVISOR	 	6 - TECNICO DE TI   ");
 		System.out.println("											");
 		System.out.println("   Entre com qualquer tecla para Encerrar 	");
 		System.out.println("											");
 		System.out.println("********************************************");
 					
-	}
 	
 	int opcao;
-	
-	System.out.println("Escolha a Opção Desejada: ");
-	opcao = leia.nextInt();
-	
-		System.out.printf("Nome: %s\n", nome);
+					
+		System.out.println("Escolha a Opção Desejada: ");
+		opcao = leia.nextInt();
 		
-		switch (opcao)
+		int num1 = 0;
+		System.out.println("Insira o valor do salário: ");
+		num1 = leia.nextInt();
+		
+	
+		
+		float resultado = 0.2f;
+		float gerente = 0.10f;
+		float vendedor = 0.07f;
+		float supervisor = 0.09f;
+		float motorista = 0.06f;
+		float estoquista = 0.05f;
+		float tecnicoTi = 0.08f;
+	
+		switch (opcao) {
+		
+		case 1:
+			System.out.printf(" 1 - A opção selecionada é GERENTE.\n"
+					+ "O Reajuste salarial foi de: 10%");
+			
+			resultado = num1 + (gerente * num1);
+			System.out.printf(" é %.2f", resultado);
+			System.out.println("!!!Obrigado por utilizar nosso Sistema!!!");
+			break;
+		
+		}
+			
+		
+	
 		
 
 		
