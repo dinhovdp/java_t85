@@ -9,7 +9,7 @@ public class Exercicios_Lista_02 {
 				
 		
 		Scanner leia = new Scanner(System.in);
-		String caractere;
+		//String caractere;
 		
 
 		System.out.println("Insira um numero negativo para encerrar o Programa\n");
@@ -39,8 +39,12 @@ public class Exercicios_Lista_02 {
 				if (idade <= 50  && idade >= 21)
 					mediaIdade ++;
 				
-				if (caractere)
-					System.out.println("Caractere Invalido!\nPrograma Finalizado.");
+				//tentei e nao deu certo
+				//if (idade != caractere)
+					//System.out.println("Caractere Invalido!\nPrograma Finalizado.");
+				
+			/*aguardar novas instruçoes do curso. nao consegui criar algo que reconheça
+				caracterediferente de numero para nao dar erro no console*/
 				
 		
 		}
