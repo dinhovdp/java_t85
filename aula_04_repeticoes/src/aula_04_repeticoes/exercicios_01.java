@@ -18,25 +18,34 @@ public class exercicios_01 {
 		System.out.print("Digite o segundo número: ");
 		numeroFinal = leia.nextInt();
 
-		for (int numero = numeroInicial; numero <= numeroFinal; numero++) {
+		 //tive de fazer um if antes , estava tentando colocar tudo dentro do for	        	
+		
+		if (numeroInicial >= numeroFinal) {
 
-		    if (numero % 3 == 0 && numero % 5 == 0) {
-		        System.out.println(numero);
-		        //ao colocar o else, ele interpretará as outras linhas que nao atende os requisitos
-		        //então, eu não inseri.
-		       
-		    }
-		    
-		    else { (numero % 3 != 0 && numero % 5 != 0)
-	    	     System.out.println("Intervalo inválido");
-			        	
-		      
-		    }
-		    	
-		        
+		    System.out.println("Intervalo inválido");
+		    System.out.println("Fim do Programa");
+		} else {
+
+		    for (int numero = numeroInicial; numero <= numeroFinal; numero++) {
+
+		        if (numero % 3 == 0 && numero % 5 == 0) {
+		            System.out.println(numero);
+		            System.out.println("Fim do Programa");
+		        }
+
 		    }
 
 		}
+
+		    
+		    
+		   //vendo assim, o resultado era mais simples do que eu estava tentando fazer
+		    
+		    	
+		        
+		    
+
+		
 		
 		
 		
