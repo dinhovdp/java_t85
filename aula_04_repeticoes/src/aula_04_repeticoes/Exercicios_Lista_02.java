@@ -1,6 +1,9 @@
+package aula_04_repeticoes;
+
 import java.util.Scanner;
 
-public class Exercicio_Lista_02 {
+
+public class Exercicios_Lista_02 {
 
 	public static void main(String[] args) {
 		
