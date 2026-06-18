@@ -9,7 +9,7 @@ public class Exercicios_01_arrayVetores {
 		// TODO Auto-generated method stub
 
 		
-						 
+								
 		ArrayList <String> coresType = new ArrayList <String> ();
 	        
 		coresType.add("Amarelo");
@@ -17,7 +17,6 @@ public class Exercicios_01_arrayVetores {
 		coresType.add("Branco");
 		coresType.add("Laranja");
 		coresType.add("Verde");
-		
 		
 				
 	        for(String cor: coresType) {
