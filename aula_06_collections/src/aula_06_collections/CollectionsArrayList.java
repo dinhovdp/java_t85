@@ -51,7 +51,8 @@ public class CollectionsArrayList {
 		//sera trocado de 7 para o numero 25
 		numeros.set(3, 25);
 		for(int numero: numeros) {
-			System.out.println(numero);
+			
+			System.out.print(numero);
 		}
 		
 		

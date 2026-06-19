@@ -6,10 +6,11 @@ import java.util.Scanner;
 
 public class Aula_07_Atividades_01 {
 
-	private static final String contador = null;
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 
 		/*
 		 * Conteúdos trabalhados nesta atividade:
@@ -24,29 +25,39 @@ public class Aula_07_Atividades_01 {
 
 	ArrayList<Integer> numeros = new ArrayList<Integer>();
 	
-	numeros.add(leia.nextInt());
-
-	for(int numero: numeros) {
-		System.out.println(numero);
-
-	
-		
 	for (int contador = 1; contador <= 5; contador++) {
-        System.out.print("Digite a " + contador + "ª cor: ");
+        System.out.print("Digite a(o) " + contador + "ª Numero: ");
         
-		//para listar, podemos usar o metodo FOR
-		
-	
-	}
-	}
-	
-            
+	numeros.add(leia.nextInt());	}
+        
+	//para listar, podemos usar o metodo FOR
 
-            
-      
-
+		System.out.println("\nOs numeros digitados são:");
+	for(Integer numero: numeros) {
+		System.out.println(numero);	}
+	
+	 
         leia.close();
-    
+	
 	}
+	public static int soma(ArrayList<Integer> numeros) {
+		System.out.println("Soma: " + soma(numeros));
+		 
+		int soma = 0;
+
+		for (Integer numero : numeros) {
+		    soma += numero;
+		}
+
+		return soma;
+		    
+		    
+		    
+		    
+		
+		 
+	 }
 
 }
+
+
