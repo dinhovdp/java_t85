@@ -6,58 +6,54 @@ import java.util.Scanner;
 
 public class Aula_07_Atividades_01 {
 
-	
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
+        Scanner leia = new Scanner(System.in);
 
-		/*
-		 * Conteúdos trabalhados nesta atividade:
-			Laços de repetição  = OK , utilizado o FOR
-			Collections e Data Structures = OK, utilizado ArrayList
-			Manipulação de dados em coleções
-			Criação e utilização de functions
-			Entrada e saída de dados
-		 */
-		
-		Scanner leia = new Scanner(System.in);
+        ArrayList<Integer> numeros = new ArrayList<>();
 
-	ArrayList<Integer> numeros = new ArrayList<Integer>();
-	
-	for (int contador = 1; contador <= 5; contador++) {
-        System.out.print("Digite a(o) " + contador + "ª Numero: ");
-        
-	numeros.add(leia.nextInt());	}
-        
-	//para listar, podemos usar o metodo FOR
+        // Entrada dos números
+        for (int contador = 1; contador <= 5; contador++) {
+            System.out.print("Digite o " + contador + "º número: ");
+            numeros.add(leia.nextInt());
+        }
 
-		System.out.println("\nOs numeros digitados são:");
-	for(Integer numero: numeros) {
-		System.out.println(numero);	}
-	
-	 
+        // Exibe a coleção
+        System.out.println("\nListgaem de números:");
+        for (Integer numero : numeros) {
+            System.out.println(numero);
+        }
+
+        // Exibe os resultados
+        System.out.println("\nSoma: " + soma(numeros));
+        System.out.println("Média: " + media(numeros));
+        System.out.println("Maior valor: " + maior(numeros));
+
         leia.close();
-	
-	}
-	public static int soma(ArrayList<Integer> numeros) {
-		System.out.println("Soma: " + soma(numeros));
-		 
-		int soma = 0;
+    }
 
-		for (Integer numero : numeros) {
-		    soma += numero;
-		}
+    // Método para calcular a soma
+    public static int soma(ArrayList<Integer> numeros) {
 
-		return soma;
-		    
-		    
-		    
-		    
-		
-		 
-	 }
+        int soma = 0;
+
+        for (Integer numero : numeros) {
+            soma += numero;
+        }
+
+        return soma;
+    }
+
+    // Método para calcular a média
+    public static double media(ArrayList<Integer> numeros) {
+
+        return (double) soma(numeros) / numeros.size();
+    }
+
+    // Método para encontrar o maior valor
+    public static int maior(ArrayList<Integer> numeros) {
+
+        return Collections.max(numeros);
+    }
 
 }
-
-
