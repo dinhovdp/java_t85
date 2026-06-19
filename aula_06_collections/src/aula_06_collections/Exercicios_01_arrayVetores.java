@@ -1,7 +1,7 @@
 package aula_06_collections;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
 
 public class Exercicios_01_arrayVetores {
 

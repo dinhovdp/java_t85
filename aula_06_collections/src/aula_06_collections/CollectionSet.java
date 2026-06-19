@@ -33,7 +33,7 @@ public class CollectionSet {
 		//então, nao vai sair dentro do print
 		
 		
-		//FOR EACH
+		//FOR EACH00000000000000000000000000000000000
 		for(String fruta : frutas) {
 			System.out.println(fruta);  //lista tudo que esta na "variavel" frutas
 			System.out.println(fruta.hashCode()); //lista os codigos HASH
