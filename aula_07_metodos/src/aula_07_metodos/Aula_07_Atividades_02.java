@@ -4,49 +4,60 @@ import java.util.Scanner;
 
 public class Aula_07_Atividades_02 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
 
-		Scanner leia = new Scanner(System.in);
-		
-		String[][] alunos = new String[5][3];
-		
-		//preenchendo com for, a matriz
-		for(int cadastroAluno = 0; cadastroAluno < 5; cadastroAluno++){
+        Scanner leia = new Scanner(System.in);
 
-		    System.out.print("Nome: ");
-		    alunos[cadastroAluno][0] = leia.next();
+        // Matriz: 5 alunos x 3 informações
+        String[][] alunos = new String[5][3];
 
-		    System.out.print("Idade: ");
-		    alunos[cadastroAluno][1] = leia.next();
+        // Cadastro dos alunos
+        for (int indiceAluno = 0; indiceAluno < alunos.length; indiceAluno++) {
 
-		    System.out.print("Nota: ");
-		    alunos[cadastroAluno][2] = leia.next();
+            System.out.println("\nCadastro do " + (indiceAluno + 1) + "º aluno");
 
-		}
-		
-		for(int cadastroAluno = 0; cadastroAluno < 5; cadastroAluno++){
+            System.out.print("Nome: ");
+            alunos[indiceAluno][0] = leia.next();
 
-		    System.out.println("Nome: " + alunos[cadastroAluno][0]);
-		    System.out.println("Idade: " + alunos[cadastroAluno][1]);
-		    System.out.println("Nota: " + alunos[cadastroAluno][2]);
+            System.out.print("Idade: ");
+            alunos[indiceAluno][1] = leia.next();
 
-		}
-		
-		//acumular a soma das notas
-		double soma = 0;
+            System.out.print("Nota Final: ");
+            alunos[indiceAluno][2] = leia.next();
 
-		for(int cadastroAluno = 0; cadastroAluno < 5; cadastroAluno++){
+        }
 
-		    soma += Double.parseDouble(alunos[cadastroAluno][2]);
+        // Listagem dos alunos
+        System.out.println("\n========== ALUNOS CADASTRADOS ==========");
 
-		}
+        for (int indiceAluno = 0; indiceAluno < alunos.length; indiceAluno++) {
 
-		double media = soma / 5;
-		
-	}
-		
-		leia.close();
-	}
+            System.out.println("----------------------------------------");
+            System.out.println("Nome       : " + alunos[indiceAluno][0]);
+            System.out.println("Idade      : " + alunos[indiceAluno][1]);
+            System.out.println("Nota Final : " + alunos[indiceAluno][2]);
+
+        }
+
+        System.out.printf("\nMédia Geral das Notas: %.2f\n", calcularMedia(alunos));
+
+        leia.close();
+    }
+
+    // Método para calcular a média das notas
+    public static double calcularMedia(String[][] alunos) {
+
+        double somaNotas = 0;
+
+        for (int indiceAluno = 0; indiceAluno < alunos.length; indiceAluno++) {
+
+            somaNotas += Double.parseDouble(alunos[indiceAluno][2]);
+
+        }
+
+        double mediaGeral = somaNotas / alunos.length;
+
+        return mediaGeral;
+    }
 
 }
