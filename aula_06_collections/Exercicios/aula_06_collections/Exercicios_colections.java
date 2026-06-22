@@ -42,11 +42,7 @@ switch (opcao) {
 					System.out.println("digite o nome do cliente: ");
 				fila.add(leia.next());
 					
-				
-				
-				
-			}
-				
+								
 			break;
 			
 		case 2:
@@ -77,9 +73,11 @@ switch (opcao) {
 				
 			break;
 			
-			case 5:
+			
 			default:
 				System.out.println("Opção Inválida");
+				
+	
 	}
 				
 
@@ -87,7 +85,6 @@ switch (opcao) {
 			leia.close();
 		
 		
-		
-	}
+}
 
 }

@@ -27,7 +27,7 @@ public class Aula_07_Atividades_03 {
 
             opcao = leia.nextInt();
             leia.nextLine();
-
+        
             switch (opcao) {
 
             case 1:
@@ -42,69 +42,21 @@ public class Aula_07_Atividades_03 {
                 System.out.println("Produto cadastrado!");
 
                 break;
-
-            case 2:
-
-                System.out.print("Digite o nome do produto: ");
-                String nomeProduto = leia.nextLine();
-
-                boolean encontrou = false;
-
-                for (int contador = 0; contador < produtos.size(); contador++) {
-
-                    if (produtos.get(contador).equalsIgnoreCase(nomeProduto)) {
-
-                        System.out.print("Nova quantidade: ");
-                        quantidades.set(contador, leia.nextInt());
-                        leia.nextLine();
-
-                        encontrou = true;
-
-                        System.out.println("Quantidade atualizada!");
-
-                        break;
-
-                    }
-
-                }
-
-                if (!encontrou) {
-                    System.out.println("Produto não encontrado.");
-                }
-
-                break;
-
-            case 3:
-
-                System.out.println("\nProdutos cadastrados:");
-
-                for (int contador = 0; contador < produtos.size(); contador++) {
-
-                    System.out.println("Produto: " + produtos.get(contador)
-                            + " | Quantidade: " + quantidades.get(contador));
-
-                }
-
-                break;
-
-            case 4:
-
-                System.out.println("Programa encerrado.");
-
-                break;
-
+                
             default:
+                System.out.println("Opção inválida!");
+        }
+    } while (opcao != 4);
+                
+            
+        
+            
+                leia.close();
+        }    
+    }
+        
 
-                System.out.println("Opção inválida.");
-
-            }
-
-        } while (opcao != 4);
-
-        leia.close();
-
+        
     
 
-
-    }
-}
+           
