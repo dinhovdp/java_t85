@@ -1,14 +1,13 @@
 package colaboradores;
 
-public class Gerente extends Funcionarios {
+public class Gerente extends Funcionario{
 
 	private double bonus;
 	
 	public Gerente(String nome, String email, double salario, double bonus) {
 		super(nome, email, salario);
-		this.setBonus(bonus);
-		
-		
+		Validacao.validarBonus(bonus);
+		this.bonus = bonus;
 	}
 
 	public double getBonus() {
@@ -16,13 +15,21 @@ public class Gerente extends Funcionarios {
 	}
 
 	public void setBonus(double bonus) {
+		Validacao.validarBonus(bonus);
 		this.bonus = bonus;
 	}
-
+	
 	@Override
-	public void visualizar() {
-	super.visualizar();
-	System.out.printf("Bônus: R$ %.2f", this.bonus);
+	public double calcularSalario() {
+		
+		return this.getSalario() + this.bonus;
 	}
 	
+	@Override
+	public void visualizar() {
+		super.visualizar();
+		System.out.printf("\nBônus: R$ %.2f", this.bonus);
+		System.out.printf("\nO Salário do Gerente %s é R$ %.2f%n", this.getNome(), calcularSalario());
+	}
+
 }
