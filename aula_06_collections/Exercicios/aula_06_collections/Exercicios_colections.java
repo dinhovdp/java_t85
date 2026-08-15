@@ -39,10 +39,14 @@ switch (opcao) {
 				//adiciona 1 cliente
 				
 				
-					System.out.println("digite o nome do cliente: ");
-				fila.add(leia.next());
-					
+				for (String cliente: fila) {
+					fila.add(leia.next());
+					System.out.printf("digite o nome do cliente: %" , cliente);
+					fila.add(leia.next());
+				}
 								
+			
+				
 			break;
 			
 		case 2:

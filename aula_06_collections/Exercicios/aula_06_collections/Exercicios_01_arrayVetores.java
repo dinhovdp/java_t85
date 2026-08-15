@@ -2,13 +2,10 @@ package aula_06_collections;
 
 import java.util.ArrayList;
 
-
 public class Exercicios_01_arrayVetores {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-		
 								
 		ArrayList <String> coresType = new ArrayList <String> ();
 	        
