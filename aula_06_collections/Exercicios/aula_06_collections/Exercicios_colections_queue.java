@@ -4,14 +4,16 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Exercicios_colections {
+public class Exercicios_colections_queue {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
 		Scanner leia = new Scanner(System.in);
 			Queue<String> fila = new LinkedList<String>();
-						
+			int opcao;			
+			
+			do {
 			
 		System.out.println("\n******************************************");
 		System.out.println("***Bem vindo ao nosso sistema de chamados***");
@@ -27,7 +29,7 @@ public class Exercicios_colections {
 		System.out.println("********Escolha a opção desejada************");
 		System.out.println("\n******************************************");
 		
-		int opcao;
+		
 		opcao = leia.nextInt();
 		
 
@@ -35,15 +37,16 @@ switch (opcao) {
 		
 		case 1:
 				
-				System.out.println("	Opção	1 - Adiciona o Cliente a Fila	");
-				//adiciona 1 cliente
+		System.out.println("	Opção	1 - Adiciona o Cliente a Fila	");
+		//adiciona 1 cliente
 				
+			
+		System.out.printf("digite o nome do cliente: ");
+		 String nomeCliente = leia.next();
+		 fila.add(nomeCliente);
+		        	    
+					
 				
-				for (String cliente: fila) {
-					fila.add(leia.next());
-					System.out.printf("digite o nome do cliente: %" , cliente);
-					fila.add(leia.next());
-				}
 								
 			
 				
@@ -54,9 +57,9 @@ switch (opcao) {
 				System.out.println ("Clientes na fila de espera: ");
 				for(String cliente : fila) {
 				    System.out.println(cliente);
+				
+				
 				}
-				
-				
 				
 			break;
 			
@@ -79,16 +82,16 @@ switch (opcao) {
 			
 			
 			default:
-				System.out.println("Opção Inválida");
-				
-	
-	}
+				System.out.println("Opção Invalida!");
+}
+
+} while (opcao != 0);
 				
 
 			
 			leia.close();
 		
-		
+			
 }
 
 }
